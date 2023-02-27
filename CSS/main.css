@@ -1,5 +1,7 @@
+/* Body CSS */
 body{
     background-image: url('../pictures/home1.jpg');
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50%;
     margin-left: 0;
@@ -11,81 +13,82 @@ body{
 
     margin-top: 100px;
 }
-
-.content{
-    background-color: rgba(240, 248, 255, 0.6);
-    border:1px black solid;
-    margin: 5%;
-}
-
+/* ========== */
+/* Navigation part */
 .mynav{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     border-bottom: 1px solid rgb(193, 193, 193);
-    background-color: cornsilk;
+    background-color: rgb(255, 233, 147);
 
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.col{
-    border: 1px solid gray;
-}
-@media(min-width:500px){
-    .mynav{
-        height: 50px;
-        /* line height can make text align center vertically */
-        /* flex can also do the same job */
-        /* check it sometime */
-        line-height: 50px;
-    }
-    .col{
-        display: inline-block;
-        margin: 5px;
-        width: 45%;
-        vertical-align: top;
-    }
-}
-@media(max-width:499px){
-    .mynav{
-        height: 60px;
-        line-height: 60px;
-    }
-    .col{
-        display: block;
-        width: 100%;
-    }
-}
-
 .navbar{
-    
     width: fit-content;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 100%;
+    padding: 10px;
     /* border: 1px solid rgb(193, 193, 193); */
     text-align: center;
     font-weight: bolder;
 }
-
-.pic_file{
-    width: 70%;
-    margin:3% auto;
-    padding: 0;
-    border: 1px solid rgb(193, 185, 185);
-    
+.highlight{
+    background-color: rgb(255, 242, 190);
 }
-.text{
-    text-align: center;
-    font-size: medium;
+
+.logo{
+    background-image: url("../pictures/Logo2.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    margin-right: 15px;
+}
+
+/* ========== */
+/* Display part */
+.content{
+    background-color: rgba(240, 248, 255, 0.8);
+    /* border:1px black solid; */
+    margin: 15px auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 15px;
     width: 80%;
-    margin: 5px auto;
-}
-.maintext{
-    text-align: left;
-}
 
+    display: flex;
+}
+.col{
+    margin-top: 15px;
+    /* border: 1px solid rgb(0, 0, 0); */
+}
+@media(min-width:500px){
+    .content{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .col{
+        width: 45%;
+    }
+}
+@media(max-width:499px){
+    .content{
+        flex-wrap: wrap;
+    }
+    .col{
+        width: 100%;
+    }
+}
+.pic_file{
+    width: 100%;
+    max-width: 600px;
+    min-width: 100px;
+    /* border: 1px solid rgb(193, 185, 185); */
+}
+/* ========== */
+/* Footer */
 .myfooter{
     left: 0;
     bottom: 0;
@@ -97,7 +100,17 @@ body{
     color: white;
     text-align: center;
 }
-
+/* ========== */
+/* text part */
+.text{
+    text-align: center;
+    font-size: medium;
+}
+.maintext{
+    font-family: "DFKai-sb";
+    text-align: left;
+}
+/* ========== */
 .test{
     height: 200px;
     
